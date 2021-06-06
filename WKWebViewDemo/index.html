@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+                <title>UIWebView中OC与JS交互</title>
+    </head>
+
+    <body>
+        <button onclick="submitForm()">Click me</button>
+        <div class="button" onclick="firstClick()">今晚打老虎</div>
+    </body>
+
+    <script type="text/javascript">
+        function submitForm() {
+            var message = {
+              name: "david",
+              email: "david@gamil"
+            };
+            window.webkit.messageHandlers.observer.postMessage(message);
+        }
+    </script>
+
+</html>
